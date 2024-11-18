@@ -9,7 +9,10 @@ const SAMPLE_PROFILES = [
     location: 'Downtown',
     distance: '2.5 km',
     goals: ['Weight Training', 'Marathon Prep'],
-    specialties: ['CrossFit', 'Yoga'],
+    specialties: ['CrossFit', 'Yoga', 'Nutrition Coaching'],
+    trainingStyle: 'High-intensity training with focus on form and technique',
+    availability: ['Weekday Mornings', 'Weekend Afternoons'],
+    bio: 'Certified personal trainer specializing in strength and endurance. Love helping others achieve their fitness goals!'
   },
   {
     name: 'Mike',
@@ -18,7 +21,10 @@ const SAMPLE_PROFILES = [
     location: 'Westside',
     distance: '3.8 km',
     goals: ['Muscle Gain', 'Flexibility'],
-    specialties: ['Powerlifting', 'HIIT'],
+    specialties: ['Powerlifting', 'HIIT', 'Mobility Work'],
+    trainingStyle: 'Progressive overload with balanced recovery periods',
+    availability: ['Evening Sessions', 'Weekend Mornings'],
+    bio: 'Former athlete turned fitness coach. Passionate about strength training and helping beginners build confidence.'
   },
   {
     name: 'Emma',
@@ -27,7 +33,10 @@ const SAMPLE_PROFILES = [
     location: 'Eastside',
     distance: '1.2 km',
     goals: ['Cardio', 'Nutrition'],
-    specialties: ['Running', 'Meal Prep'],
+    specialties: ['Running', 'Meal Prep', 'Group Training'],
+    trainingStyle: 'Dynamic workouts combining cardio and strength',
+    availability: ['Flexible Schedule', 'Virtual Sessions'],
+    bio: 'Marathon runner and nutrition enthusiast. Believe in sustainable fitness and healthy lifestyle changes.'
   },
 ];
 
@@ -57,7 +66,7 @@ export function MatchContainer() {
         </p>
         <button
           onClick={() => setProfiles(SAMPLE_PROFILES)}
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+          className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
         >
           Refresh Profiles
         </button>
@@ -80,8 +89,8 @@ export function MatchContainer() {
       />
 
       {matches.length > 0 && (
-        <div className="mt-6 p-4 bg-green-50 rounded-lg">
-          <p className="text-green-700 font-medium">
+        <div className="mt-6 p-4 bg-purple-50 rounded-lg">
+          <p className="text-purple-700 font-medium">
             {matches.length} new match{matches.length > 1 ? 'es' : ''}!
           </p>
         </div>
